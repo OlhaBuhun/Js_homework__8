@@ -10,8 +10,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallerySmallImg = document.querySelector('.gallery');
 
-// const link = gallerySmallImg.style.list-style
-// link = "none"
+
 
 const markup = galleryItems.map(({preview, original, description}) =>
 `<li class="gallery__item">
@@ -21,6 +20,9 @@ const markup = galleryItems.map(({preview, original, description}) =>
 </li>` ).join('');
 
 gallerySmallImg.insertAdjacentHTML('beforeend', markup);
+
+// gallerySmallImg.style.list-style = "none"
+
 console.log(SimpleLightbox);
 
 new SimpleLightbox('.gallery__item a', {
